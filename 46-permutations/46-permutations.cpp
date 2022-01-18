@@ -6,7 +6,6 @@ public:
         if(nums.size() == per.size())
         {
             res.push_back(per);
-            //return;
         }
         
         for(int i=0;i<nums.size();i++)
