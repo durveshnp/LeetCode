@@ -5,7 +5,7 @@ public:
         
         for(int x : nums)
         {
-            res = res^x;
+            res ^= x;
         }
         return res;
     }
