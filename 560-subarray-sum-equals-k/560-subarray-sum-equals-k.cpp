@@ -3,7 +3,6 @@ public:
     int subarraySum(vector<int>& nums, int k) {
         int res = 0;
         int sum = 0;
-        
         map<int,int> mp;
         mp[0]++;
         
