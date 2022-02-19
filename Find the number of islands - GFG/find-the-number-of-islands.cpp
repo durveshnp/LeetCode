@@ -7,7 +7,7 @@ class Solution {
   public:
     // Function to find the number of islands.
     
-    void dfs(vector<vector<char>>& grid , int i , int j , int n , int m)
+     void dfs(vector<vector<char>>& grid , int i , int j , int n , int m)
    {
        if(i>=0 && j>=0 && i<n && j<m && grid[i][j]=='1' )
        {
@@ -25,7 +25,6 @@ class Solution {
     
     int numIslands(vector<vector<char>>& grid) {
         // Code here
-        
         int res=0;
         int m=grid.size();
         int n=grid[0].size();
