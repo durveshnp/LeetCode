@@ -8,14 +8,14 @@ public:
                 stk.push(i);
             if (s[i] == ')') 
             {
-                if (stk.empty() == false) 
+                if (!stk.empty()) 
                     stk.pop();
                 else 
                     s[i] = '*';
             }
         }
         
-        while (stk.empty() == false) 
+        while (!stk.empty()) 
         {
             s[stk.top()] = '*';
             stk.pop();
