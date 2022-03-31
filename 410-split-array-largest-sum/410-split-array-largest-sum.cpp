@@ -3,7 +3,7 @@ public:
     int splitArray(vector<int>& nums, int m) {
         int n = nums.size();
         
-        vector<unsigned int> pre(n, 1);
+        vector<unsigned int> pre(n, 0);
         vector<vector<unsigned int>> dp(n + 1, vector<unsigned int>(m + 1, INT_MAX));
         pre[0] = nums[0];
         
@@ -18,7 +18,7 @@ public:
             dp[i][1] = pre[i];
         }
         
-        dp[0][0] = 1;
+        dp[0][0] = 0;
     
         for(int i = 0; i < n; i++)
         {
