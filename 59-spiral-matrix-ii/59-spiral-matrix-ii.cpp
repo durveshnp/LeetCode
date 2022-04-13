@@ -18,7 +18,6 @@ public:
                 dir = 2;
                 top++;
             }
-            
             else if(dir ==  2)
             {
                 for(int i = top; i <= bottom; i++) 
@@ -26,7 +25,6 @@ public:
                 dir = 3;
                 right--;
             }
-            
             else if(dir == 3)
             {
                 for(int i = right; i >= left; i--) 
