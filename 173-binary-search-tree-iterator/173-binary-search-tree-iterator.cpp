@@ -13,18 +13,22 @@ class BSTIterator {
 public:
     stack<TreeNode*> s;
     
-    BSTIterator(TreeNode* root) {
+    BSTIterator(TreeNode* root) 
+    {
         partialInorder(root);
     }
     
-    void partialInorder(TreeNode* root){
+    void partialInorder(TreeNode* root)
+    {
         while(root != NULL){
             s.push(root);
             root = root->left;
         }
     }
     
-    int next() {
+    
+    int next() 
+    {
         TreeNode* top = s.top();
         s.pop();
         partialInorder(top->right);
