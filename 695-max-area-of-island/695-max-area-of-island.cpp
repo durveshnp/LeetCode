@@ -6,7 +6,7 @@ public:
         if(i < 0 || i >= row || j < 0 || j >= col || grid[i][j] == 0)
             return 0;
         grid[i][j] = 0;
-        return 1 + dfs(grid,i+1,j,row,col)+dfs(grid,i-1,j,row,col)+dfs(grid,i,j+1,row,col)+dfs(grid,i,j-1,row,col);
+        return 1 + dfs(grid,i+1,j,row,col)+dfs(grid,i-       1,j,row,col)+dfs(grid,i,j+1,row,col)+dfs(grid,i,j-1,row,col);
     }
     
     int maxAreaOfIsland(vector<vector<int>>& grid) {
