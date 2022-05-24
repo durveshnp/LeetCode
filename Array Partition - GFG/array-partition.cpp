@@ -17,7 +17,8 @@ class Solution{
        for(int i=K; i<=N; i++){
            int l = lower_bound(A.begin(), A.end(), A[i-1] - M) - A.begin();
            int h = i - K;
-           for(int j=l; j<=h; j++){
+           for(int j=l; j<=h; j++)
+           {
                dp[i] |= dp[j];
                if (dp[i])
                    break;
