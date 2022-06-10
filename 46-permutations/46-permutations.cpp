@@ -1,35 +1,29 @@
 class Solution {
 public:
     
-    void allPermutations(vector<int> nums,vector<int> &per,bool arr[],vector<vector<int>> &res)
+    void permute(int pos,vector<int> &nums,vector<vector<int>> &ans)
     {
-        if(nums.size() == per.size())
+        if(pos >= nums.size())
         {
-            res.push_back(per);
+            ans.push_back(nums);
         }
         
-        for(int i=0;i<nums.size();i++)
+        for(int i=pos;i<nums.size();i++)
         {
-            if(arr[i] == false)
-            {
-                arr[i] = true;
-                per.push_back(nums[i]);
-                allPermutations(nums,per,arr,res);
-                per.pop_back();
-                arr[i] = false;
-            }
+            swap(nums[i],nums[pos]);
+            permute(pos+1,nums,ans);
+            swap(nums[i],nums[pos]);
         }
+        
     }
     
     vector<vector<int>> permute(vector<int>& nums) {
-        vector<vector<int>> res;
-        vector<int> per;
-        int n = nums.size();
-        bool arr[n];
-        for(int i=0;i<n;i++)
-            arr[i] = false;
-        allPermutations(nums,per,arr,res);
+        vector<vector<int>> ans;
         
-        return res;
+        permute(0,nums,ans);
+        
+        return ans;
+        
+        
     }
 };
